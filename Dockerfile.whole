@@ -1,0 +1,30 @@
+# ------------------------------------
+# Minimal Gramine-ready Workspace Image
+# ------------------------------------
+    ARG BASE_IMAGE=python:3.10-slim
+    FROM ${BASE_IMAGE}
+    
+    USER root
+    SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+    
+    WORKDIR /
+    
+    # Install minimal dependencies for OpenFL workspace
+    RUN apt-get update && \
+        apt-get install -y --no-install-recommends curl ca-certificates git && \
+        rm -rf /var/lib/apt/lists/*
+    
+    # Copy workspace zip
+    ARG WORKSPACE_NAME
+    COPY ${WORKSPACE_NAME}.zip /workspace.zip
+    
+    # Install fx CLI, import workspace, and pip requirements
+    RUN pip install --no-cache-dir openfl && \
+        fx workspace import --archive /workspace.zip && \
+        cd /workspace && \
+        pip install --no-cache-dir -r ./requirements.txt && \
+        rm -rf /root/.cache /workspace.zip
+    
+    USER user
+    CMD ["/bin/bash"]
+    
