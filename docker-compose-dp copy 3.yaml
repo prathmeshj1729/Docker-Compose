@@ -1,0 +1,5 @@
+services:
+  image-classifier:
+    image: ghcr.io/prathmeshj1729/dp:1.1
+    volumes:
+      - /tmp/DPoutput:/app/pipelineOutput
