@@ -1,5 +1,5 @@
 services:
   image-classifier:
-    image: ghcr.io/prathmeshj1729/iudx-differential-privacy-i:latest
+    image: ghcr.io/prathmeshj1729/my-dp-image:2.0
     volumes:
       - /tmp/DPoutput:/app/pipelineOutput
