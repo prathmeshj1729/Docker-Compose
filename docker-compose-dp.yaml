@@ -2,4 +2,8 @@ services:
   image-classifier:
     image: ghcr.io/prathmeshj1729/iudx-differential-privacy-i:latest
     volumes:
+      - /tmp/DPinput/inputdata:/app/data
+      - /tmp/DPinput/config:/app/config
       - /tmp/DPoutput:/app/pipelineOutput
+    ports:
+      - "6000:6000"
