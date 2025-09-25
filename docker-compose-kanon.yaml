@@ -1,6 +1,6 @@
 services:
   arx-anonymisation:
-    image: ghcr.io/datakaveri/arx-anonymization:v1
+    image: ghcr.io/kailash-reddy/arx-kanon:v1
     volumes:
       - /tmp/arx_input/input_file:/app/data
       - /tmp/arx_input/config:/app/config
