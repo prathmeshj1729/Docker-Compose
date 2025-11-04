@@ -2,8 +2,8 @@ services:
   skald-anonymisation:
     image: ghcr.io/kailash-reddy/skald:latest
     volumes:
-      - /tmp/skald_input/input_file:/app/data
-      - /tmp/skald_input/config:/app/config
-      - /tmp/skald_output:/app/output
+      - /tmp/SKALD_input/input_file:/app/data
+      - /tmp/SKALD_input/config:/app/config
+      - /tmp/SKALD_output:/app/output
     ports:
       - "8070:8070"
