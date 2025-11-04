@@ -1,6 +1,6 @@
 services:
   skald-anonymisation:
-    image: ghcr.io/kailash-reddy/skald:latest
+    image: ghcr.io/kailash-reddy/skald:latest2
     volumes:
       - /tmp/SKALD_input/input_file:/app/data
       - /tmp/SKALD_input/config:/app/config
