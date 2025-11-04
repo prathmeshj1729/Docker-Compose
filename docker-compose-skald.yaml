@@ -6,4 +6,4 @@ services:
       - /tmp/SKALD_input/config:/app/config
       - /tmp/SKALD_output:/app/output
     ports:
-      - "8070:8070"
+      - "8071:8071"
