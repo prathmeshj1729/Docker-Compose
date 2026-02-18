@@ -1,5 +1,7 @@
 services:
-  image-classifier:
-    image: ghcr.io/prathmeshj1729/iudx-differential-privacy-i:latest
+  differential-privacy:
+    image: ghcr.io/kailash-reddy/differential-privacy:v1
     volumes:
-      - /tmp/DPoutput:/app/pipelineOutput
+      - /tmp/DP_input/input_file:/app/data
+      - /tmp/DP_input/config:/app/config
+      - /tmp/DP_output:/app/output
