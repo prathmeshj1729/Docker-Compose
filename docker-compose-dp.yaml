@@ -2,6 +2,6 @@ services:
   differential-privacy:
     image: ghcr.io/kailash-reddy/differential-privacy:v1
     volumes:
-      - /tmp/SKALD_input/input_file:/app/data
-      - /tmp/SKALD_input/config:/app/config
-      - /tmp/SKALD_output:/app/output
+      - /tmp/tee_input/input_file:/app/data
+      - /tmp/tee_input/config:/app/config
+      - /tmp/tee_output:/app/output
