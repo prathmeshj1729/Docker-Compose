@@ -1,6 +1,6 @@
 services:
   skald-anonymisation:
-    image: ghcr.io/kailash-reddy/skald:latest
+    image: ghcr.io/datakaveri/skald:latest
     volumes:
       - /tmp/tee_input/data:/app/data
       - /tmp/tee_input/config:/app/config
